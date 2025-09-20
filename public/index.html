@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AIRM — e-Beszámoló feltöltés</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>AIRM — e-Beszámoló feltöltés</h1>
+      <div class="lang">
+        <button data-lang="hu" class="lang-btn active">HU</button>
+        <button data-lang="en" class="lang-btn">EN</button>
+      </div>
+    </header>
+
+    <main class="card">
+      <p data-i18n="upload_hint">
+        Csak PDF. A részletes riportot csak mi látjuk; te az eredményt kapod.
+      </p>
+
+      <form id="uploadForm">
+        <input type="file" name="file" accept="application/pdf" required />
+        <input type="email" name="email" placeholder="E-mail (opcionális)" />
+        <button type="submit" id="btnUpload" data-i18n="upload_btn">Feltöltés</button>
+      </form>
+
+      <div id="result" class="result"></div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
